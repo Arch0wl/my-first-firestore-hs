@@ -16,9 +16,10 @@ const restaurant = {
     phone: '(786) 677-2903',
 }
 
-// db.collection('restaurants').add(restaurant)
-// .then(doc => console.log('Created restaurant', doc.id))
-// .catch(err => console.error(err))    
+db.collection('restaurants')
+.add(restaurant)
+.then(doc => console.log('Created restaurant', doc.id))
+.catch(err => console.error(err))    
 
 const restaurant2 = {
     name: 'Bolay',
@@ -37,3 +38,4 @@ async function addRestaurant(data){
 }
 
 addRestaurant(restaurant2) 
+
